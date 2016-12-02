@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grantmw/react-redux-starter-kit.git"
+    "url": "git+https://github.com/grantmw/grants-react-redux-starter-kit.git"
   },
   "author": "GrantW",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/grantmw/react-redux-starter-kit/issues"
+    "url": "https://github.com/grantmw/grants-react-redux-starter-kit/issues"
   },
-  "homepage": "https://github.com/grantmw/react-redux-starter-kit#readme",
+  "homepage": "https://github.com/grantmw/grants-react-redux-starter-kit#readme",
   "dependencies": {
     "axios": "^0.15.3",
     "lodash": "^4.17.2",
