@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/grantmw/react-redux-starter-kit/issues"
   },
-  "homepage": "https://github.com/grantmw/react-redux-starter-kit#readme"
+  "homepage": "https://github.com/grantmw/react-redux-starter-kit#readme",
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.12.1"
+  }
 }
