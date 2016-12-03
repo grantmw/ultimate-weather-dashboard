@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import SearchForm from '../containers/search_form'
 
 export default class App extends Component {
   render() {
     return (
     	<div>
-	    	Hello! You're ready to go!
+    		<SearchForm />
     	</div>
     );
   }
