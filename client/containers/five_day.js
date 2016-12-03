@@ -5,8 +5,10 @@ import Chart from '../components/five_chart';
 import GoogleMap from '../components/g_map.js';
 
 class FiveDayCharts extends Component {
-	renderFiveDay(cityData) {
-		console.log(cityData)
+	
+
+	renderFiveDay() {
+		const cityData = this.props.fiveDayData
 		const name = cityData.city.name;
 		const temps = _.map(cityData.list.map(weather => weather.main.temp), (temp) => (temp*(9/5))-459.67);
 		const pressures = cityData.list.map(weather => weather.main.pressure);
@@ -16,28 +18,37 @@ class FiveDayCharts extends Component {
 
 
 		return (
-			<tr key={name}>
-				<td>
-					<GoogleMap lon={lon} lat={lat} />
-				</td>
-				<td>
-					<Chart data={temps} color='red' units='&deg;F' />
-				</td>
-				<td>
-					<Chart data={pressures} color='yellow' units='hPa' />
-				</td>
-				<td>
-					<Chart data={humidities} color='blue' units='%' />
-				</td>
+			<div className="col-md-4">
+				<ul className="list-group" key={name}> 5 day forecast
+			
+					<li className="list-group-item">
+						<GoogleMap lon={lon} lat={lat} />
+					</li>
+					<li className="list-group-item"> Temperature
+						<Chart data={temps} color='red' units='&deg;F' />
+					</li>
+					<li className="list-group-item"> Pressure
+						<Chart data={pressures} color='yellow' units='hPa' />
+					</li>
+					<li className="list-group-item"> Humidity
+						<Chart data={humidities} color='blue' units='%' />
+					</li>
 
-			</tr>
+				</ul>
+			</div>
 		);
 	}
 
 	render(){
-		{console.log(this.props.fiveDayData)}
+		if (!this.props.fiveDayData) {
+			return (
+				<div>
+				</div>
+			);
+		}
 		return(
 			<div>
+				{this.renderFiveDay()}
 			</div>
 		);
 	}
@@ -48,3 +59,8 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(FiveDayCharts);
+
+// constructor(props) {
+// 		super(props);
+// 		this.renderFiveDay = this.renderFiveDay.bind(this);
+// 	}
