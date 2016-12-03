@@ -1,6 +1,9 @@
-import React, { Component } from 'React';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { getFiveDay } from '../actions/index'
 
-export default class SearchForm extends Component {
+class SearchForm extends Component {
 
 	constructor(props) {
 		super(props);
@@ -15,7 +18,8 @@ export default class SearchForm extends Component {
 
 	onFormSubmit(event) {
 		event.preventDefault();
-		console.log(this.state.term)
+		this.props.getFiveDay(this.state.term);
+		this.setState({term: ''});
 	}
 
 
@@ -35,3 +39,10 @@ export default class SearchForm extends Component {
 		);
 	}
 }
+
+function mapDispatchToProps(dispatch) {
+	return bindActionCreators({ getFiveDay },dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(SearchForm);
+
