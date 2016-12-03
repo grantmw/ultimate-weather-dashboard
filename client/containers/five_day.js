@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Chart from '../components/five_chart';
-import GoogleMap from '../components/map.js';
+import GoogleMap from '../components/g_map.js';
 
 class FiveDayCharts extends Component {
 	renderFiveDay(cityData) {
+		console.log(cityData)
 		const name = cityData.city.name;
 		const temps = _.map(cityData.list.map(weather => weather.main.temp), (temp) => (temp*(9/5))-459.67);
 		const pressures = cityData.list.map(weather => weather.main.pressure);
@@ -33,10 +34,17 @@ class FiveDayCharts extends Component {
 		);
 	}
 
+	render(){
+		{console.log(this.props.fiveDayData)}
+		return(
+			<div>
+			</div>
+		);
+	}
 }
 
 function mapStateToProps(state) {
-	return {fiveDay: state.fiveDay}
+	return {fiveDayData: state.fiveDay}
 }
 
 export default connect(mapStateToProps)(FiveDayCharts);

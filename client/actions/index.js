@@ -10,7 +10,6 @@ export function getFiveDay(city) {
 	//api request
 	const url = `${ROOT_URL}&q={${city}},{us}`;
 	const request = axios.get(url); //request is promise, doesn't contain anything until done
-
 	return {
 		type: GET_FIVE_DAY,
 		payload: request
