@@ -20,7 +20,6 @@ class FiveDayCharts extends Component {
 		return (
 			<div className="col-md-4">
 				<ul className="list-group" key={name}> 5 day forecast
-			
 					<li className="list-group-item">
 						<GoogleMap lon={lon} lat={lat} />
 					</li>
@@ -35,6 +34,7 @@ class FiveDayCharts extends Component {
 					</li>
 
 				</ul>
+				<GoogleMap lon={lon} lat={lat} />
 			</div>
 		);
 	}
