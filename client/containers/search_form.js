@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getFiveDay } from '../actions/index'
+import { getCurrent } from '../actions/index'
 
 class SearchForm extends Component {
 
@@ -19,6 +20,7 @@ class SearchForm extends Component {
 	onFormSubmit(event) {
 		event.preventDefault();
 		this.props.getFiveDay(this.state.term);
+		this.props.getCurrent(this.state.term);
 		this.setState({term: ''});
 	}
 
@@ -41,7 +43,7 @@ class SearchForm extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-	return bindActionCreators({ getFiveDay },dispatch)
+	return bindActionCreators({ getFiveDay, getCurrent },dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(SearchForm);
