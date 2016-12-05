@@ -5,7 +5,7 @@ export default (props) => {
 	return(
 		<GoogleMapLoader
 			containerElement={
-			  <div style={{height: "300px", width: "300px"}} />
+			  <div style={{height: "250px", width: "250px"}} />
 			}
 			googleMapElement={
 			  <GoogleMap

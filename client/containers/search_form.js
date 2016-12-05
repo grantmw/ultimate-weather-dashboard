@@ -27,7 +27,7 @@ class SearchForm extends Component {
 
 	render() {
 		return(
-			<form className="input-group" onSubmit={this.onFormSubmit}>
+			<form className="input-group input-group-lg" onSubmit={this.onFormSubmit}>
 				<input 
 					placeholder="Search for any city in the US"
 					className="form-control"

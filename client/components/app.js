@@ -7,8 +7,12 @@ export default class App extends Component {
   render() {
     return (
     	<div>
-    		<SearchForm />
-    		<Current />
+    		<div className="row">
+	    		<SearchForm />
+    		</div>
+    		<div className="row">
+	    		<Current />
+    		</div>
     	</div>
     );
   }
