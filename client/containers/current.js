@@ -29,6 +29,10 @@ class Current extends Component {
 						{wind} mph
 					</div> 
 					<div className="col-md-5">
+						<div className="city-name">
+							{name}
+						</div>
+						<hr />
 						<div className="current-temperature"> 
 							{temp} &deg;F 
 						</div>

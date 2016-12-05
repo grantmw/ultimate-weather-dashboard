@@ -29,7 +29,7 @@ class SearchForm extends Component {
 		return(
 			<form className="input-group input-group-lg" onSubmit={this.onFormSubmit}>
 				<input 
-					placeholder="Search for any city in the US"
+					placeholder="Get the weather for any US city"
 					className="form-control"
 					value={this.state.term}
 					onChange={this.onInputChange}

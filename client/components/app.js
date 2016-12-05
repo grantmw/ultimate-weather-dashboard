@@ -12,6 +12,8 @@ export default class App extends Component {
     		</div>
     		<div className="row">
 	    		<Current />
+            </div>
+            <div className="row">
                 <FiveDayCharts />
     		</div>
     	</div>
