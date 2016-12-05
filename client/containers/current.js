@@ -11,6 +11,7 @@ class Current extends Component {
 	}
 
 	renderCurrent() {
+			const name = this.props.today.name;
 			const lat = this.props.today.coord.lat;
 			const lon = this.props.today.coord.lon;
 			const icon = this.props.today.weather[0].icon;
@@ -21,8 +22,8 @@ class Current extends Component {
 			const wind = this.props.today.wind.speed
 
 			return(
-				<div className="">
-					<div className="col-md-7">
+				<div>
+					<div className="col-md-7" key={name}>
 						<GoogleMap lon={lon} lat={lat}  />
 						<img src="../../styling/images/wind.png" alt="wind-icon" />
 						{wind} mph
