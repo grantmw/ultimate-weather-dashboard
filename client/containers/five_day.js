@@ -18,11 +18,8 @@ class FiveDayCharts extends Component {
 
 
 		return (
-			<div className="col-md-4">
-				<ul className="list-group" key={name}> 5 day forecast
-					<li className="list-group-item">
-						<GoogleMap lon={lon} lat={lat} />
-					</li>
+			<div >
+				<ul className="list-group" key={name}>
 					<li className="list-group-item"> Temperature
 						<Chart data={temps} color='red' units='&deg;F' />
 					</li>
@@ -32,9 +29,8 @@ class FiveDayCharts extends Component {
 					<li className="list-group-item"> Humidity
 						<Chart data={humidities} color='blue' units='%' />
 					</li>
-
 				</ul>
-				<GoogleMap lon={lon} lat={lat} />
+	
 			</div>
 		);
 	}
@@ -47,7 +43,7 @@ class FiveDayCharts extends Component {
 			);
 		}
 		return(
-			<div>
+			<div className="col-md-4 five-day-container">
 				{this.renderFiveDay()}
 			</div>
 		);

@@ -13,19 +13,29 @@ body {
 	padding: 15px;
 }
 
-.weather-icon {
-	width: 60px;
-	height: 60px;
-	display: inline-block;
+.five-day-container {
+	margin-top: 30px;
+	text-align: center !important;
 }
 
-.temperature {
+ul li {
+	vertical-align: middle !important;
+	text-align: center !important;
+}
+
+.weather-icon {
+	display: inline-block;
+	text-transform: uppercase;
+	margin-top: 20px;
+}
+
+.current-temperature {
 	border-radius: 50%;
 	width: 150px;
 	height: 150px;
 	border: 1px solid black;
 	text-align: center;
 	line-height: 150px;
-	display: inline-block;
 	font-size: 50px;
+	margin: auto;
 }

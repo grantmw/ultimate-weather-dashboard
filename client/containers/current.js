@@ -24,17 +24,19 @@ class Current extends Component {
 				<div className="">
 					<div className="col-md-7">
 						<GoogleMap lon={lon} lat={lat}  />
+						<img src="../../styling/images/wind.png" alt="wind-icon" />
+						{wind} mph
 					</div> 
 					<div className="col-md-5">
-						<img className="weather-icon" src={"http://openweathermap.org/img/w/" + icon + ".png"} alt="weather-icon" />
-						<div className="temperature"> 
+						<div className="current-temperature"> 
 							{temp} &deg;F 
 						</div>
-						<br />
-						L: {low_temp} <br />
-						H: {high_temp} <br />
-						{description} <br />
-						{wind} <br />
+						<div className="weather-icon">
+							L: {low_temp} <br />
+							<img src={"http://openweathermap.org/img/w/" + icon + ".png"} alt="weather-icon" /> 
+							{description} <br />
+							H: {high_temp} <br />
+						</div>
 					</div>
 				</div>
 			);
