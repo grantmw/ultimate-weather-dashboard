@@ -23,12 +23,12 @@ class Current extends Component {
 
 			return(
 				<div>
-					<div className="col-sm-3" key={name}>
+					<div className="col-lg-3" key={name}>
 						<div className="g-map">
 							<GoogleMap lon={lon} lat={lat}  />
 						</div>
 					</div> 
-					<div className="col-sm-4 current-info-main">
+					<div className="col-lg-4 current-info-main">
 						<div className="city-name">
 							{name}
 						</div>
@@ -37,20 +37,24 @@ class Current extends Component {
 							{temp} &deg;F 
 						</div>
 					</div>
-					<div className="col-sm-5 current-details">
+					<div className="col-lg-5 current-details">
 						<div className="detail-high-row">
-							<div className="current-high-low"> H: {high_temp} </div>
+							<div className="current-high"> H: {high_temp} </div>
+							<div className="current-description">
+									<img src={"http://openweathermap.org/img/w/" + icon + ".png"} alt="weather-icon" /> 
+									heavy shower rain and drizzle
+							</div>
 						</div>
 						<div className="detail-low-row">
-							<div className="current-high-low"> L: {low_temp} </div>
-						</div>
-						<div className="weather-icon">
-			
-							<img src={"http://openweathermap.org/img/w/" + icon + ".png"} alt="weather-icon" /> 
-							{description} <br />
-							
-							<img src="../../styling/images/wind.png" alt="wind-icon" />
-							{wind} mph
+							<div className="current-low"> L: {low_temp} </div>
+							<div className="current-wind">
+								<img className="static-icon" src="../../styling/images/windblue.png" alt="wind-icon" />
+								{wind}<span className="units"> mph</span>
+							</div>
+							<div className="current-wind">
+								<img className="static-icon" src="../../styling/images/sun-glasses.png" alt="glasses-icon" />
+								{wind}<span className="units"> mph</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -69,7 +73,7 @@ class Current extends Component {
 			);
 		} 
 		return(
-			<div className='col-sm-12 current-container'>
+			<div className='col-lg-12 current-container'>
 				{this.renderCurrent()}
 			</div>
 		);
@@ -82,3 +86,5 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps)(Current);
+
+

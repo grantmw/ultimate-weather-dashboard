@@ -62,25 +62,83 @@ ul li {
 }
 
 .current-details {
-	text-align: center;
+	text-align: left;
 	height: 250px;
 	background-color: #f4cd8b;
 	color: white;
 	padding-left: 0px !important;
+	padding-right: 0px !important;
 	font-size: 50px;
+	line-height: 40px;
 }
 
 .detail-high-row {
 	height: 50%;
-	width: 110px;
-	border-right: 3px solid white;
+	width: 100%;
+	display: table;
+	table-layout: fixed;
 }
 
 .detail-low-row {
 	height: 50%;
+	width: 100%;
+	border-top: 3px solid white;
+	display: table;
+	table-layout: fixed;
+}
+
+.current-high {
+	text-align: center;
 	width: 110px;
 	border-right: 3px solid white;
-	border-top: 3px solid white;
-
+	display: table-cell;
+	vertical-align: middle !important;
 }
+
+.current-low {
+	text-align: center;
+	width: 110px;
+	border-right: 3px solid white;
+	display: table-cell;
+	vertical-align: middle !important;
+}
+
+.current-description {
+	text-align: center;
+	width: 200px;
+	height: 125px;
+	display: table-cell;
+	border-right: 3px solid white;
+	vertical-align: middle !important;
+}
+
+.current-wind {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle !important;
+}
+
+.static-icon {
+	display: block;
+	margin: auto;
+}
+
+.units {
+	font-size: 25px;
+}
+
+
+/*.current-description-text {
+	position: absolute;
+	display: table;
+	height: 100%;
+	width: 100%
+}
+
+.current-description-text p{
+	display: table-cell; 
+	display: inline;
+	vertical-align: middle; 
+	text-align: center;  
+}*/
 
