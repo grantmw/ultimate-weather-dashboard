@@ -20,6 +20,15 @@ class Current extends Component {
 			const high_temp = this.toF(this.props.today.main.temp_max)
 			const description = this.props.today.weather[0].description
 			const wind = this.props.today.wind.speed
+			
+			// if (this.props.today.rain == 'undefined') {
+			// 	const rain = 0
+			// } else {
+			// 	const rain = this.props.today.rain["3h"]
+			// }
+
+			// const snow = this.props.today.snow.["3h"]
+			// const rain = this.props.today.snow.["3h"]
 
 			return(
 				<div>
@@ -39,21 +48,25 @@ class Current extends Component {
 					</div>
 					<div className="col-lg-5 current-details">
 						<div className="detail-high-row">
-							<div className="current-high"> H: {high_temp} </div>
-							<div className="current-description">
+							<div className="current-high detail-cell"> H: {high_temp} </div>
+							<div className="current-description detail-cell">
 									<img src={"http://openweathermap.org/img/w/" + icon + ".png"} alt="weather-icon" /> 
 									heavy shower rain and drizzle
 							</div>
+							<div className="current-snow detail-cell">
+								<img className="static-icon" src="../../styling/images/raindrop.png" alt="rain-icon" />
+								<span className="units"> (last 3hours))</span>
+							</div>
 						</div>
 						<div className="detail-low-row">
-							<div className="current-low"> L: {low_temp} </div>
-							<div className="current-wind">
+							<div className="current-low detail-cell"> L: {low_temp} </div>
+							<div className="current-wind detail-cell">
 								<img className="static-icon" src="../../styling/images/windblue.png" alt="wind-icon" />
 								{wind}<span className="units"> mph</span>
 							</div>
-							<div className="current-wind">
-								<img className="static-icon" src="../../styling/images/sun-glasses.png" alt="glasses-icon" />
-								{wind}<span className="units"> mph</span>
+							<div className="current-snow detail-cell">
+								<img className="static-icon" src="../../styling/images/snowflakeblue.png" alt="snow-icon" />
+								<span className="units"> (last 3hours))</span>
 							</div>
 						</div>
 					</div>
@@ -64,7 +77,11 @@ class Current extends Component {
 
 
 	render(){
-
+		if (this.props.hasOwnProperty("today.snow")) {
+			console.log("yes")
+		} else {
+			console.log("no")
+		}
 		console.log(this.props.today);
 		if (!this.props.today) {
 			return (

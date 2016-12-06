@@ -7,7 +7,6 @@ const CURR_URL = `http://api.openweathermap.org/data/2.5/weather?appid=${API_KEY
 export const GET_FIVE_DAY = 'GET_FIVE_DAY';
 export const CURRENT = 'CURRENT';
 
-
 export function getFiveDay(city) {
 	//api request
 	const url = `${FIVE_URL}&q={${city}},{us}`;

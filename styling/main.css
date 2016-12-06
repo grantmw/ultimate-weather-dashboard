@@ -87,36 +87,29 @@ ul li {
 	table-layout: fixed;
 }
 
-.current-high {
+.detail-cell {
 	text-align: center;
-	width: 110px;
-	border-right: 3px solid white;
 	display: table-cell;
 	vertical-align: middle !important;
+	line-height: 40px
+}	
+
+.current-high {
+	width: 110px;
+	border-right: 3px solid white;
 }
 
 .current-low {
-	text-align: center;
 	width: 110px;
 	border-right: 3px solid white;
-	display: table-cell;
-	vertical-align: middle !important;
 }
 
 .current-description {
-	text-align: center;
 	width: 200px;
 	height: 125px;
-	display: table-cell;
 	border-right: 3px solid white;
-	vertical-align: middle !important;
 }
 
-.current-wind {
-	display: table-cell;
-	text-align: center;
-	vertical-align: middle !important;
-}
 
 .static-icon {
 	display: block;
@@ -124,7 +117,7 @@ ul li {
 }
 
 .units {
-	font-size: 25px;
+	font-size: 15px;
 }
 
 
