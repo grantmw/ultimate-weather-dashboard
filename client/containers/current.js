@@ -23,12 +23,12 @@ class Current extends Component {
 
 			return(
 				<div>
-					<div className="col-md-7" key={name}>
-						<GoogleMap lon={lon} lat={lat}  />
-						<img src="../../styling/images/wind.png" alt="wind-icon" />
-						{wind} mph
+					<div className="col-sm-3" key={name}>
+						<div className="g-map">
+							<GoogleMap lon={lon} lat={lat}  />
+						</div>
 					</div> 
-					<div className="col-md-5">
+					<div className="col-sm-4 current-info-main">
 						<div className="city-name">
 							{name}
 						</div>
@@ -36,11 +36,21 @@ class Current extends Component {
 						<div className="current-temperature"> 
 							{temp} &deg;F 
 						</div>
+					</div>
+					<div className="col-sm-5 current-details">
+						<div className="detail-high-row">
+							<div className="current-high-low"> H: {high_temp} </div>
+						</div>
+						<div className="detail-low-row">
+							<div className="current-high-low"> L: {low_temp} </div>
+						</div>
 						<div className="weather-icon">
-							L: {low_temp} <br />
+			
 							<img src={"http://openweathermap.org/img/w/" + icon + ".png"} alt="weather-icon" /> 
 							{description} <br />
-							H: {high_temp} <br />
+							
+							<img src="../../styling/images/wind.png" alt="wind-icon" />
+							{wind} mph
 						</div>
 					</div>
 				</div>
@@ -59,7 +69,7 @@ class Current extends Component {
 			);
 		} 
 		return(
-			<div className='col-md-6 current-container'>
+			<div className='col-sm-12 current-container'>
 				{this.renderCurrent()}
 			</div>
 		);

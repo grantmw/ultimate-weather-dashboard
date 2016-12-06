@@ -5,7 +5,11 @@ export default (props) => {
 	return(
 		<GoogleMapLoader
 			containerElement={
-			  <div style={{height: "250px", width: "250px"}} />
+			  <div style={{
+			  	height: "250px", 
+			  	width: "250px",
+			  	borderRadius: "3px",
+			  	border: "2px solid white"}} />
 			}
 			googleMapElement={
 			  <GoogleMap

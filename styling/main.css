@@ -3,7 +3,7 @@
 }
 
 body {
-	background-color: #e3ecf9 !important;
+	background: linear-gradient(90deg, #4d7eb7 10%, #61bcd8 90%);
 }
 
 .input-group {
@@ -11,7 +11,7 @@ body {
 }
 
 .current-container {
-	background-color: white;
+	background-color: transparent;
 	margin-top: 30px;
 	text-align: center !important;
 	padding: 15px;
@@ -37,14 +37,50 @@ ul li {
 	border-radius: 50%;
 	width: 150px;
 	height: 150px;
-	border: 1px solid black;
+	border: 3px solid;
 	text-align: center;
 	line-height: 150px;
 	font-size: 50px;
 	margin: auto;
 }
 
+.current-info-main hr {
+	margin: 15px;
+}
+
+.current-info-main {
+	height: 250px;
+	background-color: #2F4F4F;
+	color: white;
+}
+
 .city-name {
 	font-size: 50px;
 	line-height: 50px;
+	margin-top: 10px;
+	text-transform: uppercase;
 }
+
+.current-details {
+	text-align: center;
+	height: 250px;
+	background-color: #f4cd8b;
+	color: white;
+	padding-left: 0px !important;
+	font-size: 50px;
+}
+
+.detail-high-row {
+	height: 50%;
+	width: 110px;
+	border-right: 3px solid white;
+}
+
+.detail-low-row {
+	height: 50%;
+	width: 110px;
+	border-right: 3px solid white;
+	border-top: 3px solid white;
+
+}
+
