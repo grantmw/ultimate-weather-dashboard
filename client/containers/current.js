@@ -53,7 +53,7 @@ class Current extends Component {
 							</div>
 							<div className="current-description detail-cell">
 									<img src={"http://openweathermap.org/img/w/" + icon + ".png"} alt="weather-icon" /> 
-									heavy shower rain and drizzle
+									{description}
 							</div>
 							<div className="current-sunrise detail-cell">
 								<img className="static-icon" src="../../styling/images/sunrise.png" alt="sunrise-icon" />
