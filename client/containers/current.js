@@ -20,7 +20,14 @@ class Current extends Component {
 			const high_temp = this.toF(this.props.today.main.temp_max)
 			const description = this.props.today.weather[0].description
 			const wind = this.props.today.wind.speed
-			
+			const rise_date = new Date(this.props.today.sys.sunrise*1000);
+			const set_date = new Date(this.props.today.sys.sunset*1000);
+			const rise_hour = rise_date.getHours();			
+			const set_hour = set_date.getHours();	
+			const rise_minutes = "0" + rise_date.getMinutes();			
+			const set_minutes = "0" + set_date.getMinutes();
+			const sunrise_time = rise_hour + ':' + rise_minutes.substr(-2)			
+			const sunset_time = set_hour + ':' + set_minutes.substr(-2)			
 			// if (this.props.today.rain == 'undefined') {
 			// 	const rain = 0
 			// } else {
@@ -50,7 +57,7 @@ class Current extends Component {
 						<div className="detail-high-row">
 							<div className="current-high detail-cell"> 
 								<div className="range-letter">H </div>
-								101 
+								{high_temp}<sup>&deg;F</sup>
 							</div>
 							<div className="current-description detail-cell">
 									<img src={"http://openweathermap.org/img/w/" + icon + ".png"} alt="weather-icon" /> 
@@ -58,13 +65,13 @@ class Current extends Component {
 							</div>
 							<div className="current-sunrise detail-cell">
 								<img className="static-icon" src="../../styling/images/sunrise.png" alt="sunrise-icon" />
-								<span className="units"></span>
+								{sunrise_time}<span className="units"></span>
 							</div>
 						</div>
 						<div className="detail-low-row">
 							<div className="current-low detail-cell"> 
 								<div className="range-letter">L </div>
-								-20 
+								{low_temp}<sup>&deg;F</sup>
 							</div>
 							<div className="current-wind detail-cell">
 								<img className="static-icon" src="../../styling/images/windblue.png" alt="wind-icon" />
@@ -72,7 +79,7 @@ class Current extends Component {
 							</div>
 							<div className="current-sunset detail-cell">
 								<img className="static-icon" src="../../styling/images/sunset.png" alt="sunset-icon" />
-								<span className="units"></span>
+								{sunset_time}<span className="units"></span>
 							</div>
 						</div>
 					</div>
