@@ -11,7 +11,10 @@ export default class App extends Component {
 	    		<SearchForm className="col-lg-12" />
     		</div>
     		<div className="row">
-	    		<Current />
+                <Current />
+            </div>
+            <div className="row">
+	    		<FiveDayCharts />
             </div>
     	</div>
     );

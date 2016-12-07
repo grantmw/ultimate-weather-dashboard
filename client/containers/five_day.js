@@ -18,19 +18,16 @@ class FiveDayCharts extends Component {
 
 
 		return (
-			<div >
-				<ul className="list-group" key={name}>
-					<li className="list-group-item"> Temperature
-						<Chart data={temps} color='red' units='&deg;F' />
-					</li>
-					<li className="list-group-item"> Pressure
-						<Chart data={pressures} color='yellow' units='hPa' />
-					</li>
-					<li className="list-group-item"> Humidity
-						<Chart data={humidities} color='blue' units='%' />
-					</li>
-				</ul>
-	
+			<div>
+				<div className="col-lg-4 five-day-temp">
+					<Chart data={temps} color='red' units='&deg;F' />
+				</div>
+				<div className="col-lg-4 five-day-pressure">
+					<Chart data={pressures} color='yellow' units='hPa' />
+				</div>
+				<div className="col-lg-4 five-day-humidity">
+					<Chart data={humidities} color='blue' units='%' />
+				</div>
 			</div>
 		);
 	}
@@ -43,7 +40,7 @@ class FiveDayCharts extends Component {
 			);
 		}
 		return(
-			<div className="col-md-4 five-day-container">
+			<div className="col-lg-12 five-day-container">
 				{this.renderFiveDay()}
 			</div>
 		);

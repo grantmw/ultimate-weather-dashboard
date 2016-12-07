@@ -48,6 +48,8 @@ ul li {
 	margin: 15px;
 }
 
+
+
 .current-info-main {
 	height: 250px;
 	background-color: #2F4F4F;
@@ -149,6 +151,12 @@ ul li {
 	.current-description {
 		font-size: 30px;
 		line-height: 30px;
+	}
+}
+
+@media(max-width:1199px) {
+	.g-maps-container {
+		
 	}
 }
 

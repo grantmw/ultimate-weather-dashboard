@@ -9,7 +9,8 @@ export default (props) => {
 			  	height: "250px", 
 			  	width: "250px",
 			  	borderRadius: "3px",
-			  	border: "2px solid white"}} />
+			  	border: "2px solid white",
+			  	margin: "auto"}} />
 			}
 			googleMapElement={
 			  <GoogleMap
