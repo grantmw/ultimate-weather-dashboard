@@ -8,7 +8,7 @@ export default class App extends Component {
     return (
     	<div>
     		<div className="row">
-	    		<SearchForm />
+	    		<SearchForm className="col-lg-12" />
     		</div>
     		<div className="row">
 	    		<Current />
