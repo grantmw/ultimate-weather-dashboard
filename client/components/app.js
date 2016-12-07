@@ -6,7 +6,7 @@ import Current from '../containers/current';
 export default class App extends Component {
   render() {
     return (
-    	<div>
+    	<div className="application-container">
     		<div className="row">
 	    		<SearchForm className="col-lg-12" />
     		</div>

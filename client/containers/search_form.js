@@ -22,6 +22,7 @@ class SearchForm extends Component {
 		this.props.getFiveDay(this.state.term);
 		this.props.getCurrent(this.state.term);
 		this.setState({term: ''});
+		$('.application-container').addClass( "animated fadeIn" );
 	}
 
 
