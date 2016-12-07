@@ -145,6 +145,13 @@ ul li {
 	font-size: 15px;
 }
 
+@media(max-width:767px) {
+	.current-description {
+		font-size: 30px;
+		line-height: 30px;
+	}
+}
+
 
 /*.current-description-text {
 	position: absolute;
