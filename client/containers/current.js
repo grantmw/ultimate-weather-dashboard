@@ -28,14 +28,6 @@ class Current extends Component {
 			const set_minutes = "0" + set_date.getMinutes();
 			const sunrise_time = rise_hour + ':' + rise_minutes.substr(-2)			
 			const sunset_time = set_hour + ':' + set_minutes.substr(-2)			
-			// if (this.props.today.rain == 'undefined') {
-			// 	const rain = 0
-			// } else {
-			// 	const rain = this.props.today.rain["3h"]
-			// }
-
-			// const snow = this.props.today.snow.["3h"]
-			// const rain = this.props.today.snow.["3h"]
 
 			return(
 				<div>

@@ -156,8 +156,27 @@ ul li {
 
 @media(max-width:1199px) {
 	.g-maps-container {
-		
+
 	}
+}
+
+.forecast-charts hr {
+	width: 65%;
+}
+
+.forecast-chart {
+	color: white;
+}
+
+.five-day-heading {
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 17px;
+}
+
+.five-day-section {
+	font-size: 25px;
+	font-weight: 900;
 }
 
 

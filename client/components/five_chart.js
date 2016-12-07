@@ -8,12 +8,14 @@ function average(numbers) {
 export default (props) => {
 
 	return(
-		<div>
+		<div className="sl-chart">
+			<div className="five-day-heading">
+				{props.title}: {average(props.data)} {props.units}
+			</div>
 			<Sparklines height={80} width={160} data={props.data}>
 				<SparklinesLine color={props.color} />
 				<SparklinesReferenceLine type='avg' />
 			</Sparklines>
-			<div>{average(props.data)} {props.units}</div>
 		</div>
 	);
 }
