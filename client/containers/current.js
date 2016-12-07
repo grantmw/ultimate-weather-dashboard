@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import GoogleMap from '../components/g_map.js';
 
 
+
 class Current extends Component {
 
 	toF(kelvin) {
@@ -82,6 +83,7 @@ class Current extends Component {
 
 
 	render(){
+
 		console.log(this.props.today);
 		if (!this.props.today) {
 			return (

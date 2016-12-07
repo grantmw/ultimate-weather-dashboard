@@ -179,6 +179,24 @@ ul li {
 	font-weight: 900;
 }
 
+.fade-enter {
+	right: 200px;
+}
+
+.fade-enter-active {
+	right: 0px;
+	transition: .5s ease-in all;
+}
+
+.fade-leave {
+	right: 0px;
+}
+
+.fade-leave-active {
+	right: -200px;
+	transition: .5s ease-in all;
+}
+
 
 /*.current-description-text {
 	position: absolute;
