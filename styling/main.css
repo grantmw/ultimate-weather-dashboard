@@ -69,7 +69,6 @@ ul li {
 	padding-left: 0px !important;
 	padding-right: 0px !important;
 	font-size: 50px;
-	line-height: 40px;
 }
 
 .detail-high-row {
@@ -95,21 +94,44 @@ ul li {
 }	
 
 .current-high {
-	width: 110px;
+	width: 90px;
 	border-right: 3px solid white;
+	position: relative;
 }
+
 
 .current-low {
-	width: 110px;
+	width: 90px;
 	border-right: 3px solid white;
+	position: relative;
 }
 
+.range-letter {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-bottom: 3px solid white;
+	border-right: 3px solid white;
+	width: 35%;
+	font-size: 35px;
+	line-height: 33px;
+}
 .current-description {
-	width: 200px;
-	height: 125px;
+	border-right: 3px solid white;
+	font-size: 40px;
+}
+
+
+.current-wind {
 	border-right: 3px solid white;
 }
 
+.current-sunrise {
+	width: 90px;
+}
+.current-sunset {
+	width: 90px; 
+}
 
 .static-icon {
 	display: block;
