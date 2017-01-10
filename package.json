@@ -4,10 +4,11 @@
   "description": "A minimalist approach to getting your React/ Redux application off the ground as quickly as possible. ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "startdev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "postinstall": "webpack -p",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
