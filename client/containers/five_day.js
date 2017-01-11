@@ -39,7 +39,7 @@ class FiveDayCharts extends Component {
 	render(){
 		if (!this.props.fiveDayData) {
 			return (
-				<div>
+				<div className="no-five-day">
 				</div>
 			);
 		}

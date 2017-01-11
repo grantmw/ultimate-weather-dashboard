@@ -87,7 +87,7 @@ class Current extends Component {
 		console.log(this.props.today);
 		if (!this.props.today) {
 			return (
-				<div>
+				<div className="no-current">
 				</div>
 			);
 		} 
