@@ -27,18 +27,29 @@ class SearchForm extends Component {
 
 
 	render() {
+		let error;
+		let { failure } = this.props;
+		if (failure && (failure.errorType ===  'searchError')) {
+			error = this.props.failure.message;
+		} 
+		console.log(error)
 		return(
-			<form className="input-group input-group-lg" onSubmit={this.onFormSubmit}>
-				<input 
-					placeholder="Get the weather for any US city"
-					className="form-control"
-					value={this.state.term}
-					onChange={this.onInputChange}
-					/>
-				<span className="input-group-btn">
-					<button type="submit" className="btn btn-secondary">Submit</button>
-				</span>
-			</form>
+			<div className="search-form-container">
+				<form className="input-group input-group-lg" onSubmit={this.onFormSubmit}>
+					<input 
+						placeholder="Get the weather for any US city"
+						className="form-control"
+						value={this.state.term}
+						onChange={this.onInputChange}
+						/>
+					<span className="input-group-btn">
+						<button type="submit" className="btn btn-secondary">Submit</button>
+					</span>
+				</form>
+				<div className="search-error-text">
+					{error}
+				</div>
+			</div>
 		);
 	}
 }
@@ -47,5 +58,11 @@ function mapDispatchToProps(dispatch) {
 	return bindActionCreators({ getFiveDay, getCurrent },dispatch)
 }
 
-export default connect(null, mapDispatchToProps)(SearchForm);
+function mapStateToProps(state) {
+	return {
+		failure: state.searchError
+	};
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchForm);
 
